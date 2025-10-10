@@ -6,7 +6,7 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-#About the Todo App
+# About the Todo App
 
 A simple  Todo App that helps with daily task
 
