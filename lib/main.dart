@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:learning_flutter/pages/add_todo_screen.dart';
-import 'package:learning_flutter/pages/home_page.dart';
+import 'package:learning_flutter/pages/add_todos.dart';
+import 'package:learning_flutter/pages/all_folders.dart';
+import 'package:learning_flutter/pages/create_folder.dart';
+import 'package:learning_flutter/pages/todo_list.dart';
+
+import 'package:learning_flutter/pages/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +19,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white
+      ),
 
       initialRoute: "/",
       routes: {
-        '/': (_) => const HomePage(),
-        '/add-todo-screen': (_) => const AddTodoScreen(),
+        '/': (context) => const WelcomePage(),
+        '/all_folders': (context) =>  FolderScreen(),
+        '/create_folder': (context) => const CreateFolder(),
+        '/add_todos': (context) => const AddTodos(),
+        '/todo_list': (context) => const TodoList(),
       },
     );
   }
